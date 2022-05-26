@@ -1,0 +1,15 @@
+Inventory:
+  title: "Meus Itens"
+  size: 45
+  slots: 11,12,13,14,15,20,21,22,23,24,29,30,31,32,33
+  next-page-slot: 26 # só vai aparecer se tiver próxima página
+  previous-page-slot: 18 # só vai aparecer se tiver página anterior
+
+Item-Lore:
+  - ''
+  - '&7Clique para coletar esse item!'
+
+Empty:
+  type: WEB
+  name: "&cVazio"
+  slot: 22

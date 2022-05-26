@@ -1,0 +1,79 @@
+MySQL:
+  enabled: false
+  host: 'localhost'
+  database: 'db'
+  username: 'user'
+  password: 'pass'
+  port: 3306
+
+Settings:
+  command: auction
+  aliases: [leilao, leiloar]
+  save-interval: 600 # segundos
+  # a cada quantos segundos o plugin irá verificar
+  # os leilões que já foram finalizados, entregando
+  # o item ao jogador vencedor ou para o dono.
+  check-interval: 30 # segundos
+  date-format: 'dd/MM/yyyy HH:mm'
+
+Messages:
+  new-auction: '&6&lVoltz&f&lMC &8&l➜ &7O jogador &f{player} &7está leiloando o item &f{item} &7com um lance mínimo de {min_bid}&7! &8(/leilao)'
+  new-bid: '&6&lVoltz&f&lMC &8&l➜ &7O jogador &f{player} &7deu um lance de {bid_amount} &7no item &f{item}&7! &8(/leilao)'
+  need-item-in-hand: '&6&lVoltz&f&lMC &8&l➜ &cVocê precisa estar segurando um item!'
+  invalid-auction: '&6&lVoltz&f&lMC &8&l➜ &cEsse leilão não está mais disponível!'
+  invalid-amount: '&6&lVoltz&f&lMC &8&l➜ &cA quantia informada é inválida!'
+  has-bid: '&6&lVoltz&f&lMC &8&l➜ &cEsse leilão já possui lance(s) ativo(s)! Não é possível cancelar esse leilão.'
+  value-below: '&6&lVoltz&f&lMC &8&l➜ &cO valor precisa ser maior que o lance atual! ({actual_bid_amount})' # {actual_bid_amount_currency} pode ser usado
+  insufficient-currency: '&6&lVoltz&f&lMC &8&l➜ &cVocê não possui essa quantia! ({has}/{need})'
+  item-not-found: '&6&lVoltz&f&lMC &8&l➜ &cO item do leilão não está mais no seu inventário!'
+  auction-finished-without-bid: '&6&lVoltz&f&lMC &8&l➜ &7O leilão do item &f{item} &7feito por &f{player} &7foi finalizado! Nenhum lance foi dado. &8(/leilao)'
+  auction-finished-has-bid: '&6&lVoltz&f&lMC &8&l➜ &7O leilão do item &f{item} &7feito por &f{player} &7foi finalizado! O(A) vencedor(a) foi o(a) jogador(a) &f{winner} &7com um lance de {bid_amount}&7! &8(/leilao)'
+  choose-minimum-bid:
+    - '&6&lVoltz&f&lMC &8&l➜ &7Digite no chat o valor mínimo do primeiro lance!'
+    - '&6&lVoltz&f&lMC &8&l➜ &7Lembre-se que você pode usar números formatados! Exemplos: &f100k&7, &f100B&7.'
+    - ''
+    - ' &8▶ &7Item: &f{item}'
+    - ' &8▶ &7Moeda: {currency}'
+    - ' &8▶ &7Finaliza em: &f{expiration}'
+    - ''
+  choose-bid:
+    - '&6&lVoltz&f&lMC &8&l➜ &7Digite no chat o valor do lance que deseja dar!'
+    - '&6&lVoltz&f&lMC &8&l➜ &7Lembre-se que você pode usar números formatados! Exemplos: &f100k&7, &f100B&7.'
+    - ''
+    - ' &8▶ &7Item: &f{item}'
+    - ' &8▶ &7Moeda: {currency}'
+    - ' &8▶ &7Lance atual: {actual_bid}'
+    - ' &8▶ &7Expira em: &f{expiration}'
+    - ''
+
+Next-Page:
+  type: ARROW
+  name: '&aPróxima Página'
+
+Previous-Page:
+  type: ARROW
+  name: '&cPágina Anterior'
+
+Time-Formatter:
+  second: '&7segundo&f'
+  seconds: '&7segundos&f'
+  minute: '&7minuto&f'
+  minutes: '&7minutos&f'
+  hour: '&7hora&f'
+  hours: '&7horas&f'
+  day: '&7dia&f'
+  days: '&7dias&f'
+  now: '&cExpirado'
+
+Number-Formatter:
+  - 'k'
+  - 'M'
+  - 'B'
+  - 'T'
+  - 'Q'
+  - 'QQ'
+  - 'S'
+  - 'SS'
+  - 'O'
+  - 'N'
+  - 'D'

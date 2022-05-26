@@ -1,0 +1,23 @@
+Inventory:
+  title: "Leilões Ativos"
+  size: 45
+  slots: 11,12,13,14,15,20,21,22,23,24,29,30,31,32,33
+  next-page-slot: 26 # só vai aparecer se tiver próxima página
+  previous-page-slot: 18 # só vai aparecer se tiver página anterior
+
+Item-Lore:
+    - ''
+    - '&7Abaixo estão as informações'
+    - '&7desse leilão:'
+    - ''
+    - ' &8▶ &7Dono: &f{seller}'
+    - ' &8▶ &7Finaliza em: &f{expiration}'
+    - ' &8▶ &7Valor: &f{last_bid_amount}'
+    - ' &8▶ &7Último lance efetuado por: &f{last_bid_author} &8({last_bid_when})'
+    - ''
+    - '&7Clique para dar um lance!'
+
+Empty:
+  type: WEB
+  name: "&cVazio"
+  slot: 22

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Auctions">
+    <output-path>$USER_HOME$/Desktop/Pixel/plugins</output-path>
+    <root id="archive" name="Auctions.jar">
+      <element id="module-output" name="Auctions [Rankup Overpower]" />
+    </root>
+  </artifact>
+</component>

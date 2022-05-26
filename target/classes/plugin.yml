@@ -1,0 +1,9 @@
+name: Auctions
+description: Only a simple auctions plugin.
+version: 1.0
+main: com.zpedroo.voltzauctions.VoltzAuctions
+author: zPedroo_
+depend:
+  - MultiEconomy
+softdepend:
+  - PlaceholderAPI

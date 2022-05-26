@@ -1,0 +1,9 @@
+name: ${project.artifactId}
+description: ${project.description}
+version: ${project.version}
+main: com.zpedroo.voltzauctions.VoltzAuctions
+author: zPedroo_
+depend:
+  - MultiEconomy
+softdepend:
+  - PlaceholderAPI

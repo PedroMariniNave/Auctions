@@ -1,0 +1,29 @@
+Inventory:
+  title: "Selecionar Duração"
+  size: 27
+  items:
+    1:
+      action: 'TIME:10'
+      type: WATCH
+      name: '&a10 minutos'
+      slot: 11
+    2:
+      action: 'TIME:30'
+      type: WATCH
+      name: '&a30 minutos'
+      slot: 12
+    3:
+      action: 'TIME:60'
+      type: WATCH
+      name: '&a1 hora'
+      slot: 13
+    4:
+      action: 'TIME:360'
+      type: WATCH
+      name: '&a6 horas'
+      slot: 14
+    5:
+      action: 'TIME:1440'
+      type: WATCH
+      name: '&a1 dia'
+      slot: 15

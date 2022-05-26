@@ -1,0 +1,40 @@
+Inventory:
+  title: "Leilão"
+  size: 27
+  items:
+    1:
+      action: NEW_AUCTION
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDJjYjlmNDcwZDNkNzUwN2UyNWJhYjg5ZGIyNjliODA0NTkxMTIxZGQ2YWE3MDZiOTMyZGJlMWYzYjAyNjA1MyJ9fX0=
+      name: '&6Leiloar um Item'
+      lore:
+        - '&7Clique para leiloar'
+        - '&7um item seu!'
+      slot: 10
+    2:
+      action: ACTIVE_AUCTIONS
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWNiOGU3MjBhMDI3MjRiN2MzNDNmZGQ0NDc5MGZhYjRjMGQxZjE2YWFmODExMzgxOTJjNzBmODEyY2U0ZjYyMiJ9fX0=
+      name: '&6Leilões'
+      lore:
+        - '&7Clique para ver os leilões'
+        - '&7que estão ativos no momento!'
+      slot: 12
+    3:
+      action: PLAYER_AUCTIONS
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA4MWJlZGFkOTI0YzZkZmFlMGFhYzAyNzAxN2U2NzcxNjM5YjRkODMyN2NjYzI1ZjQ0ZjlmNzU0ZDE1ZTdhYSJ9fX0=
+      name: '&6Meus Leilões'
+      lore:
+        - '&7Clique para ver seus leilões'
+        - '&7ativos e expirados!'
+      slot: 14
+    4:
+      action: PLAYER_ITEMS
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Q4MDYxN2Y2YjQ1MWQwYzJmYmMxYmI5MzljZmVmZmEwNmZhMzc1ZGM1N2Q1ZThmNjFiOGUzZmE0MDQ1MmI0YiJ9fX0=
+      name: '&6Meus Itens'
+      lore:
+        - '&7Clique para ver os itens'
+        - '&7que você pode coletar!'
+      slot: 16
