@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.math.BigInteger;
 import java.util.HashSet;
+import java.util.UUID;
 
 public class AuctionManager extends DataManager {
 
@@ -35,8 +36,10 @@ public class AuctionManager extends DataManager {
 
             Bid lastBid = finishedAuction.getLastBid();
 
-            OfflinePlayer sellerPlayer = Bukkit.getOfflinePlayer(finishedAuction.getSellerUniqueId());
-            OfflinePlayer lastBidAuthorPlayer = lastBid == null ? null : Bukkit.getOfflinePlayer(lastBid.getAuthorUniqueId());
+            UUID sellerUUID = finishedAuction.getSellerUniqueId();
+            UUID winnerUUID = finishedAuction.getLastBid() == null ? null : finishedAuction.getLastBid().getAuthorUniqueId();
+            OfflinePlayer sellerPlayer = Bukkit.getOfflinePlayer(sellerUUID);
+            OfflinePlayer lastBidAuthorPlayer = lastBid == null ? null : Bukkit.getOfflinePlayer(winnerUUID);
 
             Player player = lastBid == null ? OfflinePlayerAPI.getPlayer(sellerPlayer.getName()) : OfflinePlayerAPI.getPlayer(lastBidAuthorPlayer.getName());
             if (player == null) return;

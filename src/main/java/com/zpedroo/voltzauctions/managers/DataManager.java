@@ -29,7 +29,7 @@ public class DataManager {
     }
 
     public void savePlayerData(Player player) {
-        PlayerData data = dataCache.getPlayerData().remove(player);
+        PlayerData data = dataCache.getPlayerData().get(player);
         if (data == null || !data.isQueueUpdate()) return;
 
         DBConnection.getInstance().getDBManager().savePlayerData(data);

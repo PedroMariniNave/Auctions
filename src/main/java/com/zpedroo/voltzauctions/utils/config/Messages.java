@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Messages {
 
+    public static final String OVER_MAX_BID = getColored(FileUtils.get().getString(FileUtils.Files.CONFIG, "Messages.over-max-bid"));
+
     public static final String NEW_AUCTION = getColored(FileUtils.get().getString(FileUtils.Files.CONFIG, "Messages.new-auction"));
 
     public static final String NEW_BID = getColored(FileUtils.get().getString(FileUtils.Files.CONFIG, "Messages.new-bid"));

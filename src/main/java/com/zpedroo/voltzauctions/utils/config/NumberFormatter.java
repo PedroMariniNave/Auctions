@@ -5,6 +5,9 @@ import org.apache.commons.lang.StringUtils;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.math.BigInteger;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.util.*;
 
 public class NumberFormatter {
@@ -60,6 +63,15 @@ public class NumberFormatter {
         if (rounded % 1 == 0) return ((int) rounded) + "" + entry.getValue();
 
         return rounded + "" + entry.getValue();
+    }
+
+    public String formatThousand(double number) {
+        DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(Locale.US);
+        DecimalFormatSymbols symbols = formatter.getDecimalFormatSymbols();
+        symbols.setGroupingSeparator('.');
+        formatter.setDecimalFormatSymbols(symbols);
+
+        return formatter.format(number);
     }
 
     public String formatValueWithCurrency(BigInteger value, Currency currency) {

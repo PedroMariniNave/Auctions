@@ -15,8 +15,10 @@ Settings:
   # o item ao jogador vencedor ou para o dono.
   check-interval: 30 # segundos
   date-format: 'dd/MM/yyyy HH:mm'
+  max-bid: 1000000000000000
 
 Messages:
+  over-max-bid: '&6&lVoltz&f&lMC &8&l➜ &cO valor inserido é muito alto!'
   new-auction: '&6&lVoltz&f&lMC &8&l➜ &7O jogador &f{player} &7está leiloando o item &f{item} &7com um lance mínimo de {min_bid}&7! &8(/leilao)'
   new-bid: '&6&lVoltz&f&lMC &8&l➜ &7O jogador &f{player} &7deu um lance de {bid_amount} &7no item &f{item}&7! &8(/leilao)'
   need-item-in-hand: '&6&lVoltz&f&lMC &8&l➜ &cVocê precisa estar segurando um item!'

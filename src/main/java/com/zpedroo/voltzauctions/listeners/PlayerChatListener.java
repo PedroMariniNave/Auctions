@@ -9,6 +9,7 @@ import com.zpedroo.voltzauctions.objects.Bid;
 import com.zpedroo.voltzauctions.objects.PreAuction;
 import com.zpedroo.voltzauctions.utils.config.Messages;
 import com.zpedroo.voltzauctions.utils.config.NumberFormatter;
+import com.zpedroo.voltzauctions.utils.config.Settings;
 import com.zpedroo.voltzauctions.utils.menu.Menus;
 import org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
@@ -40,6 +41,11 @@ public class PlayerChatListener implements Listener {
         BigInteger minimumBid = NumberFormatter.getInstance().filter(event.getMessage());
         if (minimumBid.signum() < 0) {
             player.sendMessage(Messages.INVALID_AMOUNT);
+            return;
+        }
+
+        if (minimumBid.compareTo(Settings.MAX_BID) > 0) {
+            player.sendMessage(Messages.OVER_MAX_BID);
             return;
         }
 

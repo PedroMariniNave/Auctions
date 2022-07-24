@@ -16,7 +16,7 @@ import java.util.*;
 public class DBManager {
 
     public void saveAuctionData(Auction auction) {
-        String query = "REPLACE INTO `" + DBConnection.AUCTIONS_TABLE + "` (`id`, `seller_uuid`, `serialized_item`, `expiration_date_in_millis`, `currency`," +
+        executeUpdate("REPLACE INTO `" + DBConnection.AUCTIONS_TABLE + "` (`id`, `seller_uuid`, `serialized_item`, `expiration_date_in_millis`, `currency`," +
                 " `minimum_bid`, `last_bid_author_uuid`, `last_bid_amount`, `last_bid_timestamp_in_millis`) VALUES " +
                 "('" + auction.getId() + "', " +
                 "'" + auction.getSellerUniqueId() + "', " +
@@ -26,8 +26,7 @@ public class DBManager {
                 "'" + auction.getMinimumBid() + "', " +
                 "'" + (auction.getLastBid() == null ? "" : auction.getLastBid().getAuthorUniqueId()) + "', " +
                 "'" + (auction.getLastBid() == null ? 0 : auction.getLastBid().getBidAmount()) + "', " +
-                "'" + (auction.getLastBid() == null ? 0 : auction.getLastBid().getTimestampInMillis()) + "');";
-        executeUpdate(query);
+                "'" + (auction.getLastBid() == null ? 0 : auction.getLastBid().getTimestampInMillis()) + "');");
     }
 
     public void savePlayerData(PlayerData data) {
@@ -134,8 +133,8 @@ public class DBManager {
 
     protected void createTable() {
         executeUpdate("CREATE TABLE IF NOT EXISTS `" + DBConnection.AUCTIONS_TABLE + "` (`id` BIGINT, `seller_uuid` VARCHAR(255)," +
-                "`serialized_item` LONGTEXT, `expiration_date_in_millis` BIGINT, `currency` LONGTEXT, `minimum_bid` DECIMAL(40,0)," +
-                "`last_bid_author_uuid` VARCHAR(255), `last_bid_amount` DECIMAL(40,0), `last_bid_timestamp_in_millis` BIGINT, PRIMARY KEY(`id`));");
+                "`serialized_item` LONGTEXT, `expiration_date_in_millis` BIGINT, `currency` LONGTEXT, `minimum_bid` DECIMAL(100,0)," +
+                "`last_bid_author_uuid` VARCHAR(255), `last_bid_amount` DECIMAL(100,0), `last_bid_timestamp_in_millis` BIGINT, PRIMARY KEY(`id`));");
         executeUpdate("CREATE TABLE IF NOT EXISTS `" + DBConnection.PLAYERS_TABLE + "` (`uuid` VARCHAR(255), `items_to_collect` LONGTEXT, PRIMARY KEY(`uuid`));");
     }
 
